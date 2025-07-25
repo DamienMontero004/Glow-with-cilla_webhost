@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | Glow by Cilla</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@100..700&family=Lato&family=Nunito&family=Poppins&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="checkout.css">
+</head>
+
+ <!-- HEADER -->
+  <header id="header">
+    <a href="#" class="brand-logo">
+      <img src="product images/logo.png" alt="Glow by Cilla Logo"/>
+    </a>
+    <h1>Glow With Cilla</h1>
+    <nav>
+      <ul id="navbar">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li> 
+      </ul>
+    </nav>
+  </header>
+
+<body>
+  <main class="checkout-container">
+    <h2 class="checkout-title">Checkout</h2>
+
+    <form id="checkoutForm" class="checkout-form">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Shipping Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" required>
+          <option value="">Select</option>
+          <option value="momo">Mobile Money</option>
+          <option value="card">Credit/Debit Card</option>
+        </select>
+      </div>
+
+      <!-- Mobile Money Fields -->
+      <div class="form-group hidden" id="momo-fields">
+        <label for="momo-number">Mobile Number</label>
+        <input type="tel" id="momo-number" name="momo-number" placeholder="e.g. 0551234567" />
+      </div>
+
+      <!-- Card Payment Fields -->
+      <div class="card-fields hidden" id="card-fields">
+        <div class="form-group">
+          <label for="card-name">Cardholder Name</label>
+          <input type="text" id="card-name" name="card-name" />
+        </div>
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" name="card-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" />
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="expiry">Expiry</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" />
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="checkout-btn">Confirm Order</button>
+    </form>
+
+    <div class="thank-you-message hidden" id="thankYou">
+      <h3>🎉 Thank you for your purchase!</h3>
+      <p>We’ve received your order and will process it shortly.</p>
+      <a href="index.html" class="continue-btn">Back to Home</a>
+    </div>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

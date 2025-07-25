@@ -1,0 +1,208 @@
+/* === BASE === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Header styles */
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--primary-purple);
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+  }
+
+  #header h1{
+    font-family: 'Great Vibes', cursive; 
+    font-size: 3rem;
+  }
+  
+  #header img {
+    width: 100%; 
+    height: 110px;
+    color: white; 
+  }
+   /* Navbar */
+  #navbar {
+    font-family: "Poppins";
+    display: flex;
+    flex-wrap: wrap;          
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 10;
+  }
+  
+  #navbar li {
+    list-style: none;
+    position: relative;
+  }
+  
+  #navbar li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(155, 11, 184);
+    transition: 0.3s ease;
+    padding: 8px 12px;
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.active {
+    color: #5a4c3f
+  }
+  
+  #navbar li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--hover-blue);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    transition: width 0.3s ease;
+  }
+  
+  #navbar li a:hover::after,
+  #navbar li a.active::after {
+    width: 30%;
+  }
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdf9fb;
+  color: #3b3b3b;
+  padding: 40px 15px;
+}
+
+/* === CONTAINER === */
+.checkout-container {
+  max-width: 600px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+.checkout-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #8e44ad;
+}
+
+/* === FORM === */
+.checkout-form .form-group {
+  margin-bottom: 20px;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #555;
+}
+
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fefefe;
+  transition: border 0.3s;
+}
+
+.checkout-form input:focus,
+.checkout-form select:focus,
+.checkout-form textarea:focus {
+  border-color: #8e44ad;
+  outline: none;
+}
+
+.checkout-form textarea {
+  resize: vertical;
+}
+
+/* === INLINE FIELDS === */
+.form-inline {
+  display: flex;
+  gap: 15px;
+}
+
+.form-inline .form-group {
+  flex: 1;
+}
+
+/* === HIDDEN === */
+.hidden {
+  display: none;
+}
+
+/* === BUTTON === */
+.checkout-btn {
+  background: #8e44ad;
+  color: #fff;
+  padding: 14px 20px;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.checkout-btn:hover {
+  background: #732d91;
+}
+
+/* === THANK YOU MESSAGE === */
+.thank-you-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.thank-you-message h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #8e44ad;
+}
+
+.continue-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #8e44ad;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.continue-btn:hover {
+  background: #6d2c8e;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 500px) {
+  .checkout-container {
+    padding: 20px;
+  }
+
+  .form-inline {
+    flex-direction: column;
+  }
+}

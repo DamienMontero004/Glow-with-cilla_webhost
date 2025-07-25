@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glow by Cilla</title>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@100..700&family=Lato&family=Nunito&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    // Show the first slide immediately
+    showSlide(currentSlide);
+
+    // Automatically rotate slides
+    setInterval(nextSlide, 5000);
+  });
+</script>
+
+
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <a href="#" class="brand-logo">
+      <img src="product images/logo.png" alt="Glow by Cilla Logo" />
+    </a>
+    <h1>Glow With Cilla</h1>
+    <nav>
+      <ul id="navbar">
+        <li><a class="active" href="index.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="shop.html"><i class="fa-solid fa-shop"></i></a></li>
+        <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="cart.html" class="cart-icon" id="cartIcon"><i class="fa fa-shopping-bag"></i><span class="cart-count" id="nav-cart-count">0</span></a></li>  
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <h4>Trade-in Offer</h4> 
+    <h2>Super Value Deals</h2>
+    <h1>On All Kormesic and Kissmwah Products</h1>
+    <p>Save more with up to 50% off</p><br>
+    <a href="shop.html" class="shop-btn">
+      <i class="fas fa-shopping-bag"></i> Shop Now
+    </a>
+  </section>
+
+  <!-- HERO SLIDER -->
+  <div class="hero-slider">
+    <div class="slide active" style="background-image: url('product images/announcement-banner.jpg');">
+      <div class="slide-text">
+        <h2>Glow Naturally</h2>
+        <p>Shop our bestselling skincare</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('product images/announcement-banner 2.jpg');">
+      <div class="slide-text">
+        <h2>Summer Sale</h2>
+        <p>Up to 50% off glow essentials</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('product images/announcement-banner 4.jpg');">
+      <div class="slide-text">
+        <h2>New Arrivals</h2>
+        <p>Discover our newest glow collection</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED TEXT -->
+  <div class="fe-text">
+    <h3>Featured Products for You</h3>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <section id="feature" class="section-p1">
+
+    <!-- Each fe-box product -->
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=cerave';">
+      <img src="product images/ceraVe cleanser.WEBP" alt="CeraVe Cleanser" />
+      <div class="des"><span>Cerave</span><h5>CeraVe Skin Cleanser</h5><p>$5.99</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('CeraVe Skin Cleanser', 5.99, 'cerave', 'product images/ceraVe cleanser.WEBP')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=goatmilk';">
+      <img src="product images/goat milk shower gel 2.JPG" alt="Goat Milk Shower Gel" />
+      <div class="des"><span>Kissmwah</span><h5>Kissmwah Goat Milk Shower Gel</h5><p>$7.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kissmwah Goat Milk Shower Gel', 7.50, 'goatmilk', 'product images/goat milk shower gel 2.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=charcoalmask';">
+      <img src="product images/charcoal mask.JPG" alt="Charcoal Mask" />
+      <div class="des"><span>Kormesic</span><h5>Kormesic Charcoal Clay Mask</h5></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kormesic Charcoal Clay Mask', 0.00, 'charcoalmask', 'product images/charcoal mask.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=acnegel';">
+      <img src="product images/kormesic acne gel 3.JPG" alt="Acne Gel" />
+      <div class="des"><span>Kormesic</span><h5>Kormesic Acne Gel</h5><p>$3.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kormesic Acne Gel', 3.50, 'acnegel', 'product images/kormesic acne gel 3.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=facialoil';">
+      <img src="product images/facial oil.JPG" alt="Turmeric Facial Oil" />
+      <div class="des"><span>Kormesic</span><h5>Turmeric Facial Essential Oil</h5><p>$15.20</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Turmeric Facial Essential Oil', 15.20, 'facialoil', 'product images/facial oil.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=mintspray';">
+      <img src="product images/oral mint spray.JPG" alt="Oral Mint Spray" />
+      <div class="des"><span>Kormesic</span><h5>Oral Mint Spray</h5><p>$3.20</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Oral Mint Spray', 3.20, 'mintspray', 'product images/oral mint spray.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=tonguecleaner';">
+      <img src="product images/tounge cleaner.JPG" alt="Tongue Cleaner" />
+      <div class="des"><span>Kormesic</span><h5>Tongue Cleaner</h5><p>$5.20</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Tongue Cleaner', 5.20, 'tonguecleaner', 'product images/tounge cleaner.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=applefacial';">
+      <img src="product images/apple facial serum.JPG" alt="Apple Facial Serum" />
+      <div class="des"><span>Kormesic</span><h5>Apple Facial Serum</h5><p>$30.20</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Apple Facial Serum', 30.20, 'applefacial', 'product images/apple facial serum.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=goldfacialcare';">
+      <img src="product images/Kormsic 24k gold facial care-main.jpg" alt="24k gold facialcare" />
+      <div class="des"><span>Kormesic</span><h5>Kormsic 24k gold facial care</h5><p>$30.20</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('24k gold facial care', 30.20, 'goldfacialcare', 'product images/Kormsic 24k gold facial care-main.jpg')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section-p1">
+    <div class="col">
+      <img src="product images/logo.png" alt="Logo" />
+      <h4>Contact</h4>
+      <p><strong>Address</strong>: Musuku Roundabout, Kwabenya, Accra, Ghana</p>
+      <p><strong>Phone</strong>: +233 530 68 7443 / <strong>WhatsApp</strong>: +233 201 666 937</p>
+      <p>Hours: 07:00 - 18:00, Mon - Sat</p>
+      <div class="follow">
+        <h4>Follow Us</h4>
+        <div class="icons">
+          <i class="fa-brands fa-snapchat"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <h4>About Us</h4>
+      <a href="aboutus.html">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="col">
+      <h4>Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="col-install">
+      <h4>Install App</h4>
+      <p>From App Store or Google Play</p>
+      <div class="row">
+        <img src="product images/appstore.png" alt="App Store" />
+        <img src="product images/playstore.png" alt="Google Play" />
+      </div>
+      <p>Secured Payment Gateway</p>
+      <div class="row">
+        <img src="product images/card.png" alt="Card" />
+        <img src="product images/mtn.jpg" alt="MTN" />
+        <img src="product images/telecel.jpg" alt="Telecel" />
+        <img src="product images/atmoney.png" alt="ATMoney" />
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>@ 2025 Glow with Cilla | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- JS FILES -->
+  <script src="cartfunctionality.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glow by Cilla</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@100..700&family=Lato&family=Nunito&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <a href="#" class="brand-logo"><img src="product images/logo.png" alt="Glow by Cilla Logo" /></a>
+    <h1>Glow With Cilla</h1>
+    <nav>
+      <ul id="navbar">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="shop.html"><i class="fa-solid fa-shop"></i></a></li> 
+        <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="cart.html" class="cart-icon" id="cartIcon"><i class="fa fa-shopping-bag"></i><span class="cart-count" id="nav-cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PRODUCT DETAILS -->
+  <section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+      <img src="" width="100%" id="Mainimg" alt="Main Product Image" class="cart-thumb">
+      <div class="small-img-group" id="thumbnailContainer"></div>
+    </div>
+
+    <div class="single-pro-details">
+      <h6 id="product-category">Home / Product</h6>
+      <h4 id="product-name">Product Name</h4>
+      <h2 id="product-price">$0.00</h2>
+      <select id="product-sizes">
+        <option>Select size</option>
+      </select>
+      <input type="number" value="1" min="1" id="quantity">
+      <button id="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+      <h4>Product details</h4>
+      <span id="product-description">Product description goes here.</span>
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    const products = {
+      cerave: {
+        name: "CeraVe SA Cleanser",
+        category: "Cleanser",
+        price: "$9.99",
+        description: "CeraVe Renewing SA Cleanser gently exfoliates and cleanses to help improve skin texture without causing irritation.",
+        sizes: ["236ml", "355ml"],
+        images: ["product images/ceraVe cleanser.WEBP", "product images/ceraVe cleanser 2.JPG"]
+      },
+      goatmilk: {
+        name: "Kissmwah Goat Milk Shower Gel",
+        category: "Shower Gel",
+        price: "$7.50",
+        description: "Gentle goat milk shower gel that moisturizes and cleanses your skin with creamy lather.",
+        sizes: ["250ml", "500ml"],
+        images: ["product images/goat milk shower gel 2.JPG"]
+      },
+      charcoalmask: {
+        name: "Kormesic Charcoal Mask",
+        category: "Mask",
+        price: "$7.50",
+        description: "A charcoal mask full of nature's essence for radiant skin.",
+        sizes: ["250ml", "500ml"],
+        images: ["product images/kormesic charcoal mask 2.webp"]
+      },
+      acnegel: {
+        name: "Kormesic Acne Gel",
+        category: "Gel",
+        price: "$3.50",
+        description: "Clears all kinds of acne effectively.",
+        sizes: ["Small", "Medium", "Large"],
+        images: ["product images/kormesic acne gel 3.JPG"]
+      },
+      facialoil: {
+        name: "Kormesic Turmeric Essential Oil",
+        category: "Oil",
+        price: "$10.50",
+        description: "Brightens your skin with anti-inflammatory turmeric power.",
+        sizes: ["10ml", "30ml"],
+        images: ["product images/facial oil.JPG"]
+      },
+        goldfacialcare: {
+        name: "Kormesic 24k Gold Facial care ",
+        category: "lotion/cream",
+        price: "$3.50",
+        description: ".",
+        sizes: [],
+        images: ["product images/Kormsic 24k gold facial care-main.jpg"]
+      },
+      applefacial:{
+        name:"Kormesic Apple Facial Serum",
+        category:"serum",
+        price: "$2.99",
+        description:"",
+        sizes:[],
+        images:["product images/apple facial serum.JPG"]
+      },
+      tonguecleaner:{
+        name:"Kormesic Tounge cleaner",
+        category:"tounge cleaner",
+        price: "$4.50",
+        description:"",
+        sizes:[],
+        images:["product images/tounge cleaner.JPG"]
+
+      },
+      mintspray:{
+        name:"Kormesic oral mint spray",
+        category:"oral spray",
+        price:"$4.70",
+        description:"",
+        sizes:[],
+        images:["product images/oral mint spray.JPG"]
+      },
+      hyaluronicacid:{
+        name:" kormesic Vitamin E Hyaluronic Acid",
+        category:"serum",
+        price:"$7.50",
+        description:"",
+        sizes:[],
+        images:["product images/Kormesic vitamin E hyaluronic acid.webp"]
+      },
+      doubleextract:{
+        name:"kissmwah double extract essence hand  cream",
+        category:"cream",
+        price:"$4.99",
+        description:"",
+        sizes:[],
+        images:["product images/kissmwah double extract essence hand  cream.JPG"]
+      },
+      liprepair:{
+        name:"Kormesic Lip Repair",
+        category:"",
+        price:"$7.50",
+        description:"",
+        sizes:[],
+        images:["product images/lip repair.JPG","product images/lip repair 3.JPG","product images/lip repair 2.JPG"]
+      },
+      oralirrigator:{
+        name:"Kormesic Oral Irrigator",
+        category:"oral",
+        price:"$7.50",
+        description:"",
+        sizes:[],
+        images:["product images/oral irrigator 3 (2).webp","product images/oral irrigator 5.webp","product images/oral irrigator 2.WEBP",]
+      },
+      vitaminccream:{
+        name:"Kormesic Vitamin C Facial Cream",
+        category:"",
+        price:"$7.50",
+        description:"",
+        sizes:[],
+        images:["product images/kormesic vitamin c facial cream.WEBP"]
+      },
+      peachcream:{
+        name:"Kormesic Peach Hand Cream",
+        category:"cream",
+        price:"$3.50",
+        description:"",
+        sizes:[],
+        images:["product images/peach hand cream 2.JPG","product images/Peach hand cream.jpeg","product images/peach hand cream.JPG"]
+      },
+      antiaging:{
+        name:"Anti Aging Serum for Men",
+        category:"serum",
+        price:"$7.50",
+        description:"",
+        sizes:[],
+        images:["product images/anti aging serum for men.JPG"]
+      },
+      lipoil:{
+        name:"Kormesic Lip Oil",
+        category:"oil",
+        price:"$3.50",
+        description:"",
+        sizes:[],
+        images:["product images/lip oil.JPG"]
+      },
+      roseextract:{
+        name:"Kormesic Rose Extract Face and Body Scrub",
+        category:"body/face scrub",
+        price:"$6.50",
+        description:"",
+        sizes:[],
+        images:["product images/Kormesic rose extract face&body scrub 1.jpeg"]
+      },
+      tumericserum:{
+        name:"Kormesic Turmeric Serum",
+        category:"serum",
+        price:"$7.50",
+        description:"",
+        sizes:[],
+        images:["product images/kormesic tumeric serum.webp"]
+      },
+    }
+        
+
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get("id");
+    const product = products[productId];
+
+    if (product) {
+      document.getElementById("product-name").textContent = product.name;
+      document.getElementById("product-price").textContent = product.price;
+      document.getElementById("product-description").textContent = product.description;
+      document.getElementById("product-category").textContent = `Home / ${product.category}`;
+
+      const sizeSelect = document.getElementById("product-sizes");
+      sizeSelect.innerHTML = '<option>Select size</option>' + (product.sizes || []).map(size => `<option>${size}</option>`).join('');
+
+      const mainImg = document.getElementById("Mainimg");
+      mainImg.src = product.images[0] || "";
+
+      const thumbContainer = document.getElementById("thumbnailContainer");
+      thumbContainer.innerHTML = "";
+      (product.images || []).forEach(imgSrc => {
+        const div = document.createElement("div");
+        div.classList.add("small-img-col");
+        const img = document.createElement("img");
+        img.src = imgSrc;
+        img.classList.add("small-img");
+        img.style.cursor = "pointer";
+        img.onclick = () => mainImg.src = imgSrc;
+        div.appendChild(img);
+        thumbContainer.appendChild(div);
+      });
+
+      // Add to Cart functionality
+      document.getElementById("add-to-cart-btn").addEventListener("click", () => {
+        const priceValue = parseFloat(product.price.replace("$", "")) || 0;
+        const image = product.images[0] || "";
+        addToCart(product.name, priceValue, productId, image);
+      });
+    } else {
+      document.querySelector("section").innerHTML = "<h2 style='text-align:center;'>Product not found</h2>";
+    }
+  </script>
+
+  <!-- CART FUNCTIONALITY -->
+  <script src="cartfunctionality.js"></script>
+
+</body>
+</html>

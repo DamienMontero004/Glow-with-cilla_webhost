@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart | Glow by Cilla</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="cart-header">
+    <a href="index.html" class="brand-logo">
+      <img src="../product images/logo.png" alt="Glow by Cilla Logo" />
+    </a>
+    <h1 class="brand-name">Glow by Cilla</h1>
+    <div class="cart-icon">
+      <i class="fa fa-shopping-bag"></i>
+      <span class="cart-count" id="nav-cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- Cart Container -->
+  <main class="cart-container">
+    <h2 class="cart-title"><i class="fas fa-shopping-bag"></i> Your Shopping Cart</h2>
+
+    <!-- Cart Items Will Be Rendered Here by JavaScript -->
+    <div id="cart-items" class="cart-items"></div>
+
+    <!-- Summary -->
+    <div class="cart-summary" id="cart-summary"></div>
+
+    <!-- Action Buttons -->
+    <div class="cart-actions">
+      <a href="shop.html" class="continue-shopping">
+        <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+      </a>
+      <a href="checkout.html" class="checkout-btn">
+        <i class="fa-solid fa-credit-card"></i> Proceed to Checkout
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="cart-footer">
+    <p>&copy; 2025 Glow by Cilla. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="cartfunctionality.js"></script>
+</body>
+</html>

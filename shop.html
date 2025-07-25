@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glow by Cilla</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@100..700&family=Lato&family=Nunito&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <a href="#" class="brand-logo">
+      <img src="product images/logo.png" alt="Glow by Cilla Logo" />
+    </a>
+    <h1>Glow With Cilla</h1>
+    <nav>
+      <ul id="navbar">
+        <li><a  href="index.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a class="active" href="shop.html"><i class="fa-solid fa-shop"></i></a></li>
+        <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="cart.html" class="cart-icon" id="cartIcon"><i class="fa fa-shopping-bag"></i><span class="cart-count" id="nav-cart-count">0</span></a></li>  
+      </ul>
+    </nav>
+    
+  </header>
+
+  <!-- SEARCH BAR -->
+  <div class="search-container">
+    <input type="text" id="shop-search-input" placeholder="search skincare products...." aria-label="Search products">
+    <button type="submit" class="search-button">Search</button>
+  </div>
+
+  <!-- HEADING -->
+  <div class="fe-text">
+    <h2>PRODUCTS</h2>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <section id="feature" class="section-p1">
+
+    <!-- Product Boxes -->
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=cerave';">
+      <img src="product images/ceraVe cleanser.WEBP" alt="CeraVe Cleanser" class="cart-thumb">
+      <div class="des"><span>Cerave</span><h5>CeraVe Skin Cleanser</h5><p>$5.99</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('CeraVe Skin Cleanser', 5.99, 'cerave', 'product images/ceraVe cleanser.WEBP')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=goatmilk';">
+      <img src="product images/goat milk shower gel 2.JPG" class="cart-thumb">
+      <div class="des"><span>Kissmwah</span><h5>Kissmwah Goat Milk Shower Gel</h5><p>$7.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kissmwah Goat Milk Shower Gel', 7.50, 'goatmilk', 'product images/goat milk shower gel 2.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=charcoalmask';">
+      <img src="product images/kormesic charcoal mask 2.webp" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Charcoal Clay Mask</h5><p>$6.00</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kormesic Charcoal Clay Mask', 6.00, 'charcoalmask', 'product images/charcoal mask.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=acnegel';">
+      <img src="product images/kormesic acne gel  2.JPG" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Acne Gel</h5><p>$3.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kormesic Acne Gel', 3.50, 'acnegel', 'product images/kormesic acne gel  2.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=facialoil';">
+      <img src="product images/facial oil.JPG" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Turmeric Facial Essential Oil</h5><p>$15.20</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Turmeric Facial Essential Oil', 15.20, 'facialoil', 'product images/facial oil.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=oralirrigator';">
+      <img src="product images/oral irrigator 2.WEBP" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Oral Irrigator</h5><p>$7.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kormesic Oral Irrigator', 7.50, 'oral-irrigator', 'product images/oral irrigator 2.WEBP')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=liprepair';">
+      <img src="product images/lip repair 2.JPG" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Lip Repair</h5><p>$7.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kormesic Lip Repair', 7.50, 'lip-repair', 'product images/lip repair 2.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=vitaminccream';">
+      <img src="product images/kormesic vitamin c facial cream 2.WEBP" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Vitamin C Facial Cream</h5><p>$7.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kormesic Vitamin C Facial Cream', 7.50, 'vitamin-c-cream', 'product images/kormesic vitamin c facial cream 2.WEBP')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=doubleextract';">
+      <img src="product images/kissmwah double extract essence hand  cream.JPG" class="cart-thumb">
+      <div class="des"><span>Kissmwah</span><h5>Kissmwah Double Extract Essence Hand Cream</h5><p>$4.99</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Double Extract Hand Cream', 4.99, 'double-extract', 'product images/kissmwah double extract essence hand  cream.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=antiaging';">
+      <img src="product images/anti aging serum for men.JPG" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Anti Aging Serum for Men</h5><p>$7.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Anti Aging Serum for Men', 7.50, 'antiaging', 'product images/anti aging serum for men.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=peachcream';">
+      <img src="product images/peach hand cream.JPG" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Peach Hand Cream</h5><p>$3.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Peach Hand Cream', 3.50, 'peach-cream', 'product images/peach hand cream.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=lipoil';">
+      <img src="product images/lip oil.JPG" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Lip Oil</h5><p>$3.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Kormesic Lip Oil', 3.50, 'lip-oil', 'product images/lip oil.JPG')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=roseextract';">
+      <img src="product images/Kormesic rose extract face&body scrub 1.jpeg" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Rose Extract Face and Body Scrub</h5><p>$6.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Rose Extract Scrub', 6.50, 'rose-extract', 'product images/Kormesic rose extract face&body scrub 1.jpeg')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=tumericserum';">
+      <img src="product images/kormesic tumeric serum.webp" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Kormesic Turmeric Serum</h5><p>$7.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Turmeric Serum', 7.50, 'tumeric-serum', 'product images/kormesic tumeric serum.webp')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="fe-box" onclick="window.location.href='single-product.html?id=hyaluronicacid';">
+      <img src="product images/Kormesic vitamin E hyaluronic acid.webp" class="cart-thumb">
+      <div class="des"><span>Kormesic</span><h5>Vitamin E Hyaluronic Acid</h5><p>$7.50</p></div>
+      <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Vitamin E Hyaluronic Acid', 7.50, 'hyaluronic-acid', 'product images/Kormesic vitamin E hyaluronic acid.webp')"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section-p1">
+    <div class="col">
+      <img src="product images/logo.png" alt="Logo" />
+      <h4>Contact</h4>
+      <p><strong>Address</strong>: Musuku Roundabout, Kwabenya, Accra, Ghana</p>
+      <p><strong>Phone</strong>: +233 530 68 7443 / <strong>WhatsApp</strong>: +233 201 666 937</p>
+      <p>Hours: 07:00 - 18:00, Mon - Sat</p>
+      <div class="follow">
+        <h4>Follow Us</h4>
+        <div class="icons">
+          <i class="fa-brands fa-snapchat"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <h4>About Us</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="col">
+      <h4>Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="col-install">
+      <h4>Install App</h4>
+      <p>From App Store or Google Play</p>
+      <div class="row">
+        <img src="product images/appstore.png" alt="App Store" />
+        <img src="product images/playstore.png" alt="Google Play" />
+      </div>
+      <p>Secured Payment Gateway</p>
+      <div class="row">
+        <img src="product images/card.png" alt="Card" />
+        <img src="product images/mtn.jpg" alt="MTN" />
+        <img src="product images/telecel.jpg" alt="Telecel" />
+        <img src="product images/atmoney.png" alt="ATMoney" />
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>@ 2025 Glow with Cilla | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="cartfunctionality.js"></script>
+</body>
+</html>
